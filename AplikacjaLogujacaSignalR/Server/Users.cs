@@ -1,4 +1,6 @@
-﻿namespace AplikacjaLogujacaSignalR.Server
+﻿using AplikacjaLogujacaSignalR.Shared;
+
+namespace AplikacjaLogujacaSignalR.Server
 {
     public class Users
     {
