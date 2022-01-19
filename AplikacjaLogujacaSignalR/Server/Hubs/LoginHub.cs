@@ -6,7 +6,10 @@ namespace AplikacjaLogujacaSignalR.Server.Hubs
     {
         public async Task SendMessage(string user, string message)
         {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
+            Users users = new Users();
+            List<User> usersList = users.getUsers();
+            //await Clients.All.SendAsync("ReceiveMessage", usersList[0].Login, message);
+            await Clients.Caller.SendAsync("ReceiveMessage", usersList[0].Login, message);
         }
     }
 }
